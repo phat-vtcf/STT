@@ -4,6 +4,8 @@ In this directory we are running and evaluating the Coqui STT system on a set of
 
 The data consists of 286 quotes of Moira, a character from the multiplayer team-based first-person shooter game Overwatch. These quotes are available as wav files in the directory wavs, while their texts are in the file moira_quote_index.csv.
 
+The audio files, along with a csv file that contains for each wav file the text of its audio, can be downloaded from the following link: https://drive.google.com/drive/folders/1nqQyZBaVbXDly6lntzY-Z0WkRyaZESlH?usp=sharing
+
 The pretrained model we use is the English STT v1.0.0 (Large Vocabulary) and it is available in the directory model.
 
 The evaluation is done by calculating the overall Word Error Rate.
