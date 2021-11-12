@@ -1,12 +1,14 @@
 ## Evaluation of Coqui STT on New Voice Data
 
-In this directory we are running and evaluating the Coqui STT system on a set of English voice data. 
+In this directory we are running and evaluating the Coqui STT system on a set of English voice data. The focus of our task is to calculate and evaluate the Word Error Rate.
 
-The data consists of 286 quotes of Moira, a character from the multiplayer team-based first-person shooter game Overwatch. These quotes are available as wav files in the directory wavs, while their texts are in the file moira_quote_index.csv.
+The data consists of 286 quotes of Moira, a character from the multiplayer team-based first-person shooter game Overwatch. Each quote is available as a wav file, while a csv file that contains for each wav file the text of its audio, called moira_quote_index.csv, is also available.
 
-The audio files, along with a csv file that contains for each wav file the text of its audio, can be downloaded from the following link: https://drive.google.com/drive/folders/1nqQyZBaVbXDly6lntzY-Z0WkRyaZESlH?usp=sharing
+The files can be downloaded from the following link: https://drive.google.com/drive/folders/1nqQyZBaVbXDly6lntzY-Z0WkRyaZESlH?usp=sharing 
 
-The pretrained model we use is the English STT v1.0.0 (Large Vocabulary) and it is available in the directory model.
+When you download them, make sure you place them as follows: the wav files within a new directory '/wavs' in the existing directory '/moira' and the csv file within the directory '/moira'.
+
+The pretrained model we use is the English STT v1.0.0 (Large Vocabulary) and it is available in the directory '/moira/model'.
 
 The evaluation is done by calculating the overall Word Error Rate.
 
@@ -17,6 +19,10 @@ To run the evaluation first install the requirements:
 ```shell
 pip install -r moira/requirements.txt
 ```
+Please note that we have used Python 3.8, so it's recommended that you do the same.
+
+Then, if you are not a Mac user, make sure you have installed the SoX sound processing utility (http://sox.sourceforge.net)
+
 Then go to the directory moira and execute the evaluation script:
 
 ```shell
